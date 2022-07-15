@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: 'CoFo Sans';
+    src: url('../fonts/CoFoSans-Bold.eot');
+    src: url('../fonts/CoFoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoFoSans-Bold.woff2') format('woff2'),
+        url('../fonts/CoFoSans-Bold.woff') format('woff'),
+        url('../fonts/CoFoSans-Bold.svg#CoFoSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CoFo Sans';
+    src: url('../fonts/CoFoSans-Regular.eot');
+    src: url('../fonts/CoFoSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoFoSans-Regular.woff2') format('woff2'),
+        url('../fonts/CoFoSans-Regular.woff') format('woff'),
+        url('../fonts/CoFoSans-Regular.svg#CoFoSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CoFo Sans';
+    src: url('../fonts/CoFoSans-Medium.eot');
+    src: url('../fonts/CoFoSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoFoSans-Medium.woff2') format('woff2'),
+        url('../fonts/CoFoSans-Medium.woff') format('woff'),
+        url('../fonts/CoFoSans-Medium.svg#CoFoSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
