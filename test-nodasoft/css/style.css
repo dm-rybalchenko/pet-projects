@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*-----------------------*/
+
 body {
   font-family: "Roboto", sans-serif;
   color: #FFFFFF;
@@ -238,13 +239,13 @@ body {
   z-index: 3;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
 }
 
 .popup-wrapper:target {
   opacity: 1;
   pointer-events: auto;
+  transition: 0.4s ease-in;
+  -webkit-transition: 0.4s ease-in;
 }
 
 .popup {
