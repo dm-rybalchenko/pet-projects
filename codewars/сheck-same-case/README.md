@@ -1,4 +1,4 @@
-##Check same case
+## Check same case
 
 Write a function that will check if two given characters are the same case.
 
