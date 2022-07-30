@@ -1,4 +1,4 @@
-## Wilson primes
+# Wilson primes
 
 [Wilson primes](https://en.wikipedia.org/wiki/Wilson_prime "") satisfy the following condition. Let `P` represent a prime number.
 

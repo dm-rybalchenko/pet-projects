@@ -1,4 +1,4 @@
-## A wolf in sheep's clothing
+# A wolf in sheep's clothing
 
 Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
 
@@ -11,7 +11,7 @@ If the wolf is the closest animal to you, return `"Pls go away and stop eating m
 
 **Note:** there will always be exactly one wolf in the array.
 
-# Examples
+## Examples
 
 Input: `["sheep", "sheep", "sheep", "wolf", "sheep"]`
 Output: `"Oi! Sheep number 1! You are about to be eaten by a wolf!"`
