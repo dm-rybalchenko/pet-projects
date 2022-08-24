@@ -21,4 +21,4 @@ Given two values from the above game, return the Player result as `"Player 1 Won
 
 Values will be given as one of `"rock", "paper", "scissors", "lizard", "spock"`.
 
-![rules](/img/rules.jpg "Rules og the game")
+![rules](img/rules.jpg "Rules og the game")
