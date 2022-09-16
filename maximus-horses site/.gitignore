@@ -1,0 +1,12 @@
+# output folder
+dist/
+
+# work files
+gulp/
+node_modules/
+gulpfile.js
+package.json
+package-lock.json
+
+# all archives
+*.zip

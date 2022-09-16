@@ -1,0 +1,201 @@
+@import "nullstyle";
+//@import "fonts";
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+// === MIXINS ===
+@mixin roboto {
+	font-family: "Roboto", sans-serif;
+}
+
+@mixin philosopher {
+	font-family: "Philosopher", sans-serif;
+}
+// === / MIXINS ===
+
+// ===  FUNCTIONS ===
+@function strip-unit($num) {
+	$oneUnit: $num * 0 + 1;
+	@return calc($num / $oneUnit);
+}
+@function rem($num) {
+	@return (calc(strip-unit($num) / 16)) * 1rem;
+}
+// === / FUNCTIONS ===
+
+// === VARIABLES ===
+$breakpoint-sm-min: 576px;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-md-min: 768px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-lg-min: 992px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xxl-min: 1400px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+
+$base: rem(4px);
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fz-xxs: rem(13px);
+$fz-xs: rem(15px);
+$fz-s: rem(18px);
+$fz-m: rem(23px);
+$fz-l: rem(35px);
+$fz-xl: rem(40px);
+$fz-xxl: rem(51px);
+
+$transition: 0.2s;
+
+// Primary
+$color-primary-100: #f5f5f5;
+$color-primary-100: #efefef;
+$color-primary-100: #eaeaea;
+$color-primary-200: #a5a5a5;
+$color-primary-200: #8f8f8f;
+$color-primary-200: #8a8a8a;
+$color-primary-200: #646464;
+$color-primary-400: #55565b;
+$color-primary-400: #363434;
+$color-primary-500: #202020;
+$color-primary-400: #0b0b0b;
+
+// Secondary
+$color-primary-50: #9bcfff;
+$color-secondary-100: #fde724;
+$color-secondary-200: #ffc700;
+$color-secondary-300: #ffb800;
+$color-secondary-400: #ff9900;
+$color-secondary-500: #6a5300;
+
+// Error
+$color-error: #ff5c00;
+
+// Main-text
+$color-main-text-2th: #7d808a;
+$color-main-text: #7e7e7e;
+
+// Colors
+$color-green: #008139;
+$color-white: #fff;
+$color-black: #000;
+
+// === / VARIABLES ===
+
+// === COMMON ===
+body {
+	@include roboto;
+	font-size: $fz-xs;
+	color: #7e7e7e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include philosopher;
+	color: #363434;
+	text-align: center;
+}
+h1 {
+	font-size: $fz-xxl;
+	font-weight: $fw-bold;
+	color: $color-black;
+	color: #000;
+}
+h2 {
+	font-size: $fz-xl;
+	font-weight: $fw-regular;
+	color: #363434;
+}
+h3 {
+	font-size: $fz-l;
+	font-weight: $fw-medium;
+}
+h4 {
+	font-size: $fz-m;
+	font-weight: $fw-medium;
+	color: #0b0b0b;
+}
+.subtitle {
+	font-weight: $fw-light;
+	text-align: center;
+	margin-top: $base * 6;
+}
+
+.section-outer {
+	padding: 0 $base * 5;
+}
+
+.section-inner {
+	margin: 0 auto;
+	max-width: 1172px;
+}
+
+.button {
+	background: linear-gradient($color-primary-50, $color-secondary-200);
+	color: $color-secondary-500;
+	font-size: $fz-xxs;
+	text-transform: uppercase;
+	text-align: center;
+	filter: drop-shadow(0 $base $base rgba(0, 0, 0, 0.25));
+	border-radius: $base;
+
+	&:hover {
+		background: linear-gradient($color-primary-50, $color-secondary-300);
+	}
+	&:active {
+		background: linear-gradient($color-secondary-300, $color-primary-50);
+	}
+
+	&__l {
+		width: $base * 68;
+		height: $base * 18;
+	}
+	&__s {
+		width: $base * 83;
+		height: $base * 18;
+	}
+}
+// === / COMMON ===
+
+// === NAVIGATION ===
+// === / NAVIGATION ===
+
+// === HEADER ===
+.section-header {
+}
+// === / HEADER ===
+
+// === ABOUT ===
+// === / ABOUT ===
+
+// === WHY-WE ===
+// === / WHY-WE ===
+
+// === AREAS ===
+// === / AREAS ===
+
+// === VISITORS ===
+// === / VISITORS ===
+
+// === HORSES ===
+// === / HORSES ===
+
+// === QUESTIONS ===
+// === / QUESTIONS ===
+
+// === REWIEWS ===
+// === / REWIEWS ===
+
+// === CONTACTS ===
+// === / CONTACTS ===
+
+// === FOOTER ===
+// === / FOOTER ===
