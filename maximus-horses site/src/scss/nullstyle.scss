@@ -43,7 +43,8 @@ textarea {
 input::-ms-clear {
 	display: none;
 }
-button {
+button,
+a {
 	cursor: pointer;
 }
 button::-moz-focus-inner {
