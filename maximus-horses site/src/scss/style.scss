@@ -1,5 +1,7 @@
 @import "nullstyle";
-//@import "fonts";
+
+// @import "fonts";
+
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
 
 // === MIXINS ===
@@ -10,16 +12,20 @@
 @mixin philosopher {
   font-family: "Philosopher", sans-serif;
 }
+
 // === / MIXINS ===
 
 // ===  FUNCTIONS ===
 @function strip-unit($num) {
-  $oneUnit: $num * 0 + 1;
-  @return calc($num / $oneUnit);
+  $one-unit: $num * 0 + 1;
+
+  @return calc($num / $one-unit);
 }
+
 @function rem($num) {
   @return (calc(strip-unit($num) / 16)) * 1rem;
 }
+
 // === / FUNCTIONS ===
 
 // === VARIABLES ===
@@ -34,13 +40,16 @@ $breakpoint-lg-max: $breakpoint-xl-min - 1px;
 $breakpoint-xxl-min: 1400px;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
 
+// common base
 $base: rem(4px);
 
+// font waights
 $fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
+// font sizes
 $fz-xxs: rem(13px);
 $fz-xs: rem(15px);
 $fz-s: rem(18px);
@@ -49,9 +58,10 @@ $fz-l: rem(35px);
 $fz-xl: rem(40px);
 $fz-xxl: rem(51px);
 
+// common transition
 $transition: 0.2s;
 
-// Primary
+// Primary color
 $color-primary-100: #f5f5f5;
 $color-primary-100: #efefef;
 $color-primary-100: #eaeaea;
@@ -64,18 +74,18 @@ $color-primary-400: #363434;
 $color-primary-500: #202020;
 $color-primary-400: #0b0b0b;
 
-// Secondary
+// Secondary color
 $color-primary-50: #9bcfff;
 $color-secondary-100: #fde724;
 $color-secondary-200: #ffc700;
 $color-secondary-300: #ffb800;
-$color-secondary-400: #ff9900;
+$color-secondary-400: #f90;
 $color-secondary-500: #6a5300;
 
-// Error
+// Error color
 $color-error: #ff5c00;
 
-// Main-text
+// Main-text color
 $color-main-text-2th: #7d808a;
 $color-main-text: #7e7e7e;
 
@@ -89,6 +99,7 @@ $color-black: #000;
 // === COMMON ===
 body {
   @include roboto;
+
   font-size: $fz-xs;
   color: #7e7e7e;
 }
@@ -100,71 +111,77 @@ h4,
 h5,
 h6 {
   @include philosopher;
+
   color: #363434;
   text-align: center;
 }
+
 h1 {
   position: relative;
   margin: $base * 10 0 $base * 10 $base * 11;
   font-size: $fz-m;
   text-align: left;
+
   span {
     font-weight: $fw-bold;
   }
 
   &::before {
-    content: "";
     position: absolute;
+    top: $fz-m / 2;
+    left: -$base * 11;
     display: block;
     width: $base * 6;
     height: 1px;
-    left: -$base * 11;
-    top: $fz-m / 2;
+    content: "";
     background: #7e7e7e;
   }
 }
+
 h2 {
+  margin-bottom: $base * 17;
   font-size: $fz-l;
   font-weight: $fw-regular;
   color: #363434;
-  margin-bottom: $base * 17;
 }
+
 h3 {
+  margin-bottom: $base * 6;
   font-size: $fz-l;
   font-weight: $fw-regular;
-  margin-bottom: $base * 6;
 }
+
 h4 {
+  margin-top: $base * 22;
   font-size: $fz-xxl;
   font-weight: $fw-bold;
   color: $color-black;
-  margin-top: $base * 22;
   text-align: left;
 }
+
 .subtitle {
+  margin-bottom: $base * 17;
   font-weight: $fw-light;
   text-align: center;
-  margin-bottom: $base * 17;
 }
 
 .section-outer {
 }
 
 .section-inner {
-  margin: 0 auto;
-  padding: 0 $base * 2;
   max-width: 1188px;
+  padding: 0 $base * 2;
+  margin: 0 auto;
 }
 
 .button {
   position: relative;
-  color: $color-secondary-500;
   font-size: $fz-xs;
   font-weight: $fw-medium;
+  color: $color-secondary-500;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.07rem;
-  text-align: center;
-  border-radius: $base;
   background: radial-gradient(
       ellipse at 50% -50%,
       rgba(255, 255, 255, 1) 0%,
@@ -172,6 +189,7 @@ h4 {
       rgba(255, 255, 255, 0) 59%
     ),
     linear-gradient(#fff383, #ffc700);
+  border-radius: $base;
   box-shadow: 0 $base 0 0 #c89c00, 0 $base * 4 $base * 8 0 #ffc7006b;
 
   &:hover {
@@ -183,6 +201,7 @@ h4 {
       ),
       linear-gradient(#ffe456, #ffb800);
   }
+
   &:active {
     background: radial-gradient(
         ellipse at 50% 150%,
@@ -194,24 +213,26 @@ h4 {
   }
 
   &::before {
-    content: "";
-    display: block;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    display: block;
+    content: "";
   }
 
   &_s {
     width: $base * 68;
     height: $base * 18;
   }
+
   &_l {
     width: $base * 83;
     height: $base * 18;
   }
 }
+
 // === / COMMON ===
 
 // === NAVIGATION ===
@@ -222,22 +243,24 @@ h4 {
     color: #202020;
     text-transform: uppercase;
   }
+
   &_footer {
-    color: #eaeaea;
     font-size: $fz-xs;
+    color: #eaeaea;
   }
+
   &__btn {
     position: relative;
     margin-right: $base * 10;
 
-    &:after {
-      content: "";
-      display: block;
+    &::after {
       position: absolute;
-      width: 100%;
-      height: 1px;
       bottom: -$base * 3;
       left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: "";
       background: #008139;
       opacity: 0;
       transition: $transition;
@@ -245,12 +268,13 @@ h4 {
 
     &:hover,
     &:active {
-      &:after {
+      &::after {
         opacity: 1;
       }
     }
   }
 }
+
 // === / NAVIGATION ===
 
 // === HEADER ===
@@ -263,13 +287,14 @@ h4 {
     z-index: 5;
   }
 }
+
 .header {
   display: flex;
 
   &-bg {
     position: absolute;
-    z-index: 0;
     top: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -298,18 +323,19 @@ h4 {
     }
 
     &-number {
-      color: #202020;
       font-size: $fz-m;
       font-weight: $fw-bold;
+      color: #202020;
     }
 
     &-mode {
-      color: #7d808a;
-      font-size: $fz-xxs;
       margin-top: $base * 2;
+      font-size: $fz-xxs;
+      color: #7d808a;
     }
   }
 }
+
 // === / HEADER ===
 
 // === ABOUT ===
@@ -339,9 +365,10 @@ h4 {
 
 // === FOOTER ===
 .section-footer {
-  background: #0b0b0b;
   padding-bottom: $base * 6;
+  background: #0b0b0b;
 }
+
 .footer {
   display: flex;
   padding: $base * 3 0 $base * 7;
@@ -359,18 +386,17 @@ h4 {
     display: block;
     width: $base * 50;
     height: $base * 11;
-    border: 1px solid #fde724;
-    border-radius: $base;
     padding-top: $base * 3;
-
     color: #f5f5f5;
     text-align: center;
+    border: 1px solid #fde724;
+    border-radius: $base;
   }
 }
 
 .confidentiality {
-  text-decoration: underline;
   color: #7d808a;
+  text-decoration: underline;
 
   &__personal {
     margin-right: $base * 10;
@@ -379,4 +405,5 @@ h4 {
   &__policy {
   }
 }
+
 // === / FOOTER ===
